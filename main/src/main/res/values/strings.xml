@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Помощник доктора</string>
+    <string name="title_activity_main">Помощник доктора</string>
+    <string name="title_operation_biometric">Проверка безопасности</string>
+    <string name="subtitle_operation_biometric">Войдите используя отпечаток пальца</string>
+    <string name="error_biometic_auth_description">Пожалуйста, авторизуйтесь по телефону</string>
+</resources>

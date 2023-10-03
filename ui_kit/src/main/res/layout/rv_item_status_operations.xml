@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkbox"
+    style="@style/TextView.StatusButton.White"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:layout_marginStart="16dp"
+    android:drawablePadding="8dp"
+    android:layout_weight="1"
+    android:background="@drawable/selector_radio_type_ordering_card"
+    android:button="@android:color/transparent"
+    android:checked="true"
+    android:gravity="center"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="16dp"
+    android:textColor="@color/base_selector_text_color_tab_radio_buttons"
+    tools:text="Ghbdtn" />

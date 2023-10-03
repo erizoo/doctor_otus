@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView" parent="Widget.MaterialComponents.TextView" />
+
+    <style name="TextView.DefaultButton">
+        <item name="android:textAppearance">@style/TextAppearance.Medium.Button</item>
+    </style>
+
+    <style name="TextView.DefaultButton.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextView.Title2024">
+        <item name="android:textAppearance">@style/TextAppearance.Medium.Title2024</item>
+    </style>
+
+    <style name="TextView.Title2024.Gray4">
+        <item name="android:textColor">@color/gray4</item>
+    </style>
+
+    <style name="TextView.StatusButton">
+        <item name="android:textAppearance">@style/TextAppearance.Bold.Button</item>
+    </style>
+
+    <style name="TextView.StatusButton.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextView.Title1822">
+        <item name="android:textAppearance">@style/TextAppearance.Regular.Title1822</item>
+    </style>
+
+    <style name="TextView.Title1822.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.Title1620">
+        <item name="android:textAppearance">@style/TextAppearance.Medium.Title1620</item>
+    </style>
+
+    <style name="TextView.Title1620.Gray3">
+        <item name="android:textColor">@color/gray3</item>
+    </style>
+
+    <style name="TextView.Title1417">
+        <item name="android:textAppearance">@style/TextAppearance.Regular.Title1417</item>
+    </style>
+
+    <style name="TextView.Title1417.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.Title1417.Red">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="TextView.TitleBold1620">
+        <item name="android:textAppearance">@style/TextAppearance.Bold.Title1620</item>
+    </style>
+
+    <style name="TextView.TitleBold1620.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.TitleRegular1620">
+        <item name="android:textAppearance">@style/TextAppearance.Regular.Title1620</item>
+    </style>
+
+    <style name="TextView.TitleRegular1620.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/tv_name_patient"
+            style="@style/TextView.Title1822.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Петрова Светлана Николаевна" />
+
+        <ImageView
+            android:id="@+id/iv_qr"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_patient" />
+
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_patient"
+            tools:text="https://secure-payment-gateway.ru/payment/merchants/sbersafe_sberid/payment_ru.html?mdOrder=9fb466bc-8818-79e9-8b3e-bf2d29180f09 " />
+
+        <TextView
+            android:id="@+id/tv_status_qr"
+            style="@style/TextView.Title1822.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_qr"
+            tools:text="Статус:\nОплачена" />
+
+        <TextView
+            android:id="@+id/tv_status_link"
+            style="@style/TextView.Title1822.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_link"
+            tools:text="Статус:\nОплачена" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_passport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hint="Серия номер паспорта"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_patient" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_passport_who"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hint="Кем выдан"
+            app:layout_constraintTop_toBottomOf="@+id/et_passport" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_passport_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hint="Дата выдачи"
+            app:layout_constraintTop_toBottomOf="@+id/et_passport_who" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_passport_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hint="Адрес регистрации"
+            app:layout_constraintTop_toBottomOf="@+id/et_passport_date" />
+
+        <ru.soft.ui_kit.views.InputTextAreaView
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            app:hintTextArea="Комментарии врача"
+            app:layout_constraintTop_toBottomOf="@+id/et_passport_address" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            style="@style/TextView.Title2024.Gray4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Петрова Светлана Николаевна"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_comment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_qr_update_status"
+            style="@style/Button.Primary.Green"
+            android:layout_marginTop="30dp"
+            android:text="Обновить статус"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status_qr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_link_update_status"
+            style="@style/Button.Primary.Green"
+            android:layout_marginTop="30dp"
+            android:text="Обновить статус"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_qr"
+            style="@style/Button.Primary.Green"
+            android:layout_marginTop="10dp"
+            android:text="QR код"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_link"
+            style="@style/Button.Primary.Green"
+            android:layout_marginTop="10dp"
+            android:text="Ссылка Сбербанк"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_qr" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:constraint_referenced_ids="btn_link, btn_qr, et_comment, et_passport, et_passport_address, et_passport_date, et_passport_who,tv_amount" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_qr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_status_qr, iv_qr, btn_qr_update_status" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_link"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_status_link, tv_link, btn_link_update_status" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name_patient"
+        style="@style/TextView.Title1822.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Петрова Светлана Николаевна" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:weightSum="3"
+        app:checkedButton="@id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_patient"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="За счет СК" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="За счет пациента" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/list_drop_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_text_area"
+        android:gravity="center"
+        android:hint="Question 1"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white_70"
+        android:textSize="14.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="@color/white_70"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_item_height="46dp"
+        app:spinner_popup_animation="dropdown"
+        app:spinner_popup_background="@color/white"
+        app:spinner_popup_elevation="14dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/list_drop_down">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_medical_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="12"
+                tools:listitem="@layout/rv_item_medical_services" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_second_medical_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="12"
+                tools:listitem="@layout/rv_item_medical_services" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_add_service"
+                style="@style/TextView.Title1620.Gray3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_add_plus"
+                android:drawablePadding="14dp"
+                android:gravity="center_vertical"
+                android:text="Добавить услугу" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_proceed"
+        style="@style/Button.Primary.Green"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Войти"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

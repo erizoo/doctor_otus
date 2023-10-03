@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:imeOptions="actionDone"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/tv_layout_error"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="5dp"
+        tools:text='error'
+        android:textColor="@color/red"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

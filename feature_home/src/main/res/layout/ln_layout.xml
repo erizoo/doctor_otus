@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/tv_name_patient"
+            style="@style/TextView.Title1822.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Петрова Светлана Николаевна" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/TextView.Title1620.Gray3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_patient"
+            tools:text="Открыт Л/Н № 230498208\nс20.05.23 по 26.05.23" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/list_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_text_area"
+            android:gravity="start"
+            android:hint="Статус Л/Н"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/mine_shaft_53"
+            android:textSize="14.5sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_divider_color="@color/white_70"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_height="56dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@color/white"
+            app:spinner_popup_elevation="14dp" />
+
+        <ru.soft.ui_kit.views.InputDateView
+            android:id="@+id/iv_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_half"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_drop_down"
+            app:textDate="с" />
+
+        <ru.soft.ui_kit.views.InputDateView
+            android:id="@+id/iv_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_half"
+            app:layout_constraintTop_toBottomOf="@+id/list_drop_down"
+            app:textDate="по" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_snils"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            app:hint="СНИЛС"
+            app:layout_constraintTop_toBottomOf="@+id/iv_to" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            style="@style/TextView.TitleRegular1620.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:paddingStart="10dp"
+            android:text="Со слов пациента в Л/Н не нуждается"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_snils" />
+
+        <ru.soft.ui_kit.views.InputTextAreaView
+            android:id="@+id/et_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            app:hintTextArea="Комментарии врача"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

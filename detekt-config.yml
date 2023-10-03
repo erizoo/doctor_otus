@@ -1,0 +1,19 @@
+config:
+  validation: true
+  warningsAsErrors: false
+  checkExhaustiveness: false
+
+complexity:
+  TooManyFunctions:
+    active: false
+
+naming:
+  PackageNaming:
+    active: false
+
+style:
+  WildcardImport:
+    active: false
+
+console-reports:
+  active: true

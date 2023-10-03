@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/fragment_order">
+
+    <TextView
+        android:id="@+id/tv_name_patient"
+        style="@style/TextView.Title1822.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Петрова Светлана Николаевна" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_patient"
+        tools:text="Телефон: 8-929-637-34-25" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone"
+        tools:text="г. Москва ул. Базовская 14 кв. 187 м. Мякинино" />
+
+    <TextView
+        android:id="@+id/tv_birthday"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address"
+        tools:text="Дата рождения: 09.11.1985" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_birthday"
+        tools:text="Номер полиса: 56877 СК: ВСК" />
+
+    <TextView
+        android:id="@+id/tv_number_sk"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number"
+        tools:text="Номер полиса: 56877 СК: ВСК" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/bg_text_area"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number_sk"
+        tools:text="Жалобы на ноющую боль в грудной клетке справа, усиливающиеся при глубоком дыхании и повороте туловища; одышку смешанного характера, возникающую при обычной ходьбе; кашель со слизисто гнойной мокротой до 100 мл. равномерно в течение суток; повышение температуры до 39С; потливость." />
+
+    <TextView
+        android:id="@+id/tv_comments"
+        style="@style/TextView.Title1417.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/bg_text_area"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        tools:text="Жалвость." />
+
+    <LinearLayout
+        android:id="@+id/layout_buttons_free_status_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comments">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_accept"
+            style="@style/Button.Primary.Green"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text="Принять" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reject"
+            style="@style/Button.Primary.Green"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text="Отклонить" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_proceed"
+        style="@style/Button.Primary.Green"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="50dp"
+        android:text="Войти"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comments" />
+</androidx.constraintlayout.widget.ConstraintLayout>

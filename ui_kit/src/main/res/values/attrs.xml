@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputView">
+        <attr name="hint" format="reference|string" />
+        <attr name="maxLength" format="integer" />
+        <attr name="maxLines" format="integer" />
+        <attr name="inputFocusable" format="boolean" />
+
+        <attr name="inputGravity">
+            <flag name="top" value="48" />
+            <flag name="bottom" value="80" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="center_vertical" value="16" />
+            <flag name="center_horizontal" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="InputDateView">
+        <attr name="textDate" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="InputTextAreaView">
+        <attr name="hintTextArea" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalListCheckItemView">
+        <attr name="checkItemText" format="string|reference" />
+        <attr name="checkItemLeftIcon" format="reference" />
+    </declare-styleable>
+</resources>

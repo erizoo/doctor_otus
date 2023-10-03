@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Новая заявка"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_fio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hint="ФИО пациента"
+            app:maxLines="1" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hint="Номер полиса"
+            app:maxLines="1" />
+
+        <ru.soft.ui_kit.views.InputPhoneView
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hint="Телефон"
+            app:maxLines="1" />
+
+        <ru.soft.ui_kit.views.InputView
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:hint="E-mail"
+            app:maxLines="1" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/list_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_text_area"
+            android:gravity="start"
+            android:hint="Страховая компания"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/mine_shaft_53"
+            android:textSize="14.5sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_divider_color="@color/white_70"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_height="56dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@color/white"
+            app:spinner_popup_elevation="14dp" />
+
+        <ru.soft.ui_kit.views.InputTextAreaView
+            android:id="@+id/et_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            app:hintTextArea="Жалобы" />
+
+        <ru.soft.ui_kit.views.InputTextAreaView
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            app:hintTextArea="Комментарии врача" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_accept"
+            style="@style/Button.Primary.Green"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="Создать" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

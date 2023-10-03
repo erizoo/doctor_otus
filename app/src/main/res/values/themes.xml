@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Med" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/green_primary</item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.App.DatePicker</item>
+    </style>
+
+    <style name="Theme.Med" parent="Base.Theme.Med" />
+
+    <style name="Widget.App.ButtonStyle"
+        parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/GreenButtonThemeOverlay</item>
+    </style>
+
+    <style name="GreenButtonThemeOverlay">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/green_primary</item>
+    </style>
+
+    <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.Material3.MaterialCalendar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+
+</resources>

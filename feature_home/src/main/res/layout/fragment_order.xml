@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_save"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage"
+                tools:text="N 14988 от 14.10.22\nСтатус: В работе" />
+
+            <ImageView
+                android:id="@+id/iv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_save"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_layout_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                <LinearLayout
+                    android:id="@+id/layout_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="Информация" />
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_medical_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="Мед. услуги" />
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="Оплата" />
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_diagnosis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="Диагноз" />
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="Фото" />
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_ln"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="ЛН" />
+
+                    <ru.soft.ui_kit.views.HorizontalListCheckItemView
+                        android:id="@+id/rb_inspection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:checkItemText="Осмотр" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <include
+                android:id="@+id/layout_order_information"
+                layout="@layout/order_information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+            <include
+                android:id="@+id/layout_medical_services"
+                layout="@layout/order_medical_services_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+            <include
+                android:id="@+id/layout_payment"
+                layout="@layout/order_payment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+            <include
+                android:id="@+id/layout_photo"
+                layout="@layout/photo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+            <include
+                android:id="@+id/layout_inspection"
+                layout="@layout/inspection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+            <include
+                android:id="@+id/layout_ln"
+                layout="@layout/ln_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+            <include
+                android:id="@+id/layout_diagnosis"
+                layout="@layout/diagnosis_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_layout_buttons" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/layout_progress"
+            layout="@layout/layout_progress" />
+
+    </FrameLayout>
+
+</ScrollView>
